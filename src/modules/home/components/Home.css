@@ -1,0 +1,309 @@
+/* Contenedor principal estilo "Sticky Floating" */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px auto;
+    padding: 0 30px;
+    width: 90%;
+    max-width: 1200px;
+    height: 70px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px); /* Efecto de desenfoque de cristal */
+    border-radius: 50px; /* Bordes muy redondeados */
+    border: 1px solid rgba(46, 125, 50, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 20px;
+    z-index: 1000;
+}
+
+/* Reset de listas */
+nav li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+/* Efecto en el Logo */
+nav img {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+nav img:hover {
+    transform: rotate(-5deg) scale(1.1);
+}
+
+/* Botón de Iniciar Sesión Moderno */
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.9rem;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #43a047 0%, #1b5e20 100%);
+    padding: 10px 25px;
+    border-radius: 25px;
+    box-shadow: 0 4px 15px rgba(67, 160, 71, 0.3);
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+/* Animación de "Levantamiento" al pasar el mouse */
+nav a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(67, 160, 71, 0.4);
+    filter: brightness(1.1);
+}
+
+nav a:active {
+    transform: translateY(-1px);
+}
+
+/* --- ESTILO BETTY LA FEA --- */
+.betty-hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 10%;
+    min-height: 90vh;
+    background: radial-gradient(circle at top left, #fdfdfd, #e8f5e9);
+    position: relative;
+}
+
+.badge-ecomoda {
+    background: #2e7d32;
+    color: #ffffff;
+    padding: 5px 15px;
+    border-radius: 4px; /* Un toque más cuadrado, tipo oficina */
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    color: #1b5e20;
+    font-family: 'Playfair Display', serif; /* Una fuente más elegante */
+    margin: 20px 0;
+}
+
+.text-green {
+    color: #43a047;
+    font-style: italic;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: #333;
+    max-width: 500px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Botones con estilo ejecutivo */
+.btn-primary {
+    background: #1b5e20;
+    color: white;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 0; /* Estilo retro-moderno cuadrado */
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 4px 4px 0px #a5d6a7;
+}
+
+.btn-primary:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px #2e7d32;
+}
+
+.btn-outline {
+    background: transparent;
+    color: #1b5e20;
+    padding: 15px 35px;
+    border: 2px solid #1b5e20;
+    margin-left: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Barra de estadísticas del Cuartel */
+.stats-bar {
+    display: flex;
+    gap: 40px;
+    margin-top: 50px;
+    border-top: 1px solid #c8e6c9;
+    padding-top: 20px;
+}
+
+.stat-item strong {
+    display: block;
+    font-size: 1.5rem;
+    color: #1b5e20;
+}
+
+.stat-item span {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Tarjeta flotante "El Diario" */
+.glass-card-betty {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid rgba(43, 94, 32, 0.2);
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    animation: bounce 4s infinite ease-in-out;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+/* --- FOOTER ESTILO ECOMODA --- */
+.ecomoda-footer {
+    background-color: #1b5e20; /* Verde Bosque muy oscuro */
+    color: #ffffff;
+    padding: 60px 8% 20px;
+    font-family: 'Inter', sans-serif;
+    margin-top: 50px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.5fr;
+    gap: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 40px;
+}
+
+.footer-brand .logo-text {
+    font-size: 1.8rem;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.footer-brand .logo-text span {
+    color: #a5d6a7; /* Verde claro */
+    font-weight: 300;
+}
+
+.footer-brand p {
+    font-size: 0.9rem;
+    color: #c8e6c9;
+    line-height: 1.6;
+    max-width: 250px;
+}
+
+/* Grupos de Enlaces */
+.footer-links {
+    display: flex;
+    gap: 50px;
+}
+
+.link-group h4 {
+    color: #a5d6a7;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.link-group ul {
+    list-style: none;
+    padding: 0;
+}
+
+.link-group ul li {
+    margin-bottom: 10px;
+}
+
+.link-group a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: 0.3s;
+    opacity: 0.8;
+}
+
+.link-group a:hover {
+    opacity: 1;
+    color: #81c784;
+    padding-left: 5px;
+}
+
+/* Newsletter */
+.footer-newsletter h4 {
+    margin-bottom: 15px;
+}
+
+.input-group {
+    display: flex;
+    margin-top: 15px;
+}
+
+.input-group input {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 12px;
+    border-radius: 5px 0 0 5px;
+    color: white;
+    width: 100%;
+    outline: none;
+}
+
+.input-group button {
+    background: #43a047;
+    color: white;
+    border: none;
+    padding: 0 20px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.input-group button:hover {
+    background: #66bb6a;
+}
+
+/* Créditos finales */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    font-size: 0.8rem;
+    color: #a5d6a7;
+}
+
+.social-icons {
+    font-size: 1.2rem;
+    display: flex;
+    gap: 15px;
+    cursor: pointer;
+}
+
+/* Mobile Friendly */
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .footer-links {
+        justify-content: center;
+    }
+    .footer-brand p {
+        margin: 0 auto;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
